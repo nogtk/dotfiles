@@ -19,9 +19,7 @@ cool-peco
 # ======================
 
 bindkey '^r' cool-peco-history
-alias pco=cool-peco-git-checkout
-alias pps=cool-peco-ps
-alias plog=cool-peco-git-log
+bindkey '^v' cool-peco-ghq
 
 export NVM_DIR="$HOME/.nvm"
   [ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
@@ -41,18 +39,6 @@ if [ -f '/Users/taka.naoga/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/taka
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/taka.naoga/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/taka.naoga/google-cloud-sdk/completion.zsh.inc'; fi
-
-# for alias ghq and peco
-function peco-src () {
-  local selected_dir=$(ghq list -p | peco --query "$LBUFFER")
-  if [ -n "$selected_dir" ]; then
-    BUFFER="cd ${selected_dir}"
-    zle accept-line
-  fi
-  zle clear-screen
-}
-zle -N peco-src
-bindkey '^g' peco-src
 
 # For use vim in gh
 export GIT_EDITOR=vim
