@@ -1,3 +1,7 @@
+SCRIPT_DIR=$HOME/dotfiles
+
+source $SCRIPT_DIR/zsh/plugins.zsh
+
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
@@ -82,3 +86,4 @@ bindkey '^g' peco-src
 export GIT_EDITOR=vim
 
 export POWERLEVEL9K_INSTANT_PROMPT=quiet
+
