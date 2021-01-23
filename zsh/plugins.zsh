@@ -22,3 +22,5 @@ zinit light-mode for \
 ### End of Zinit's installer chunk
 
 zinit ice depth=1; zinit light romkatv/powerlevel10k
+
+zinit light zdharma/fast-syntax-highlighting
