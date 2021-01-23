@@ -1,0 +1,18 @@
+set main-view = id date author commit-title:graph=yes,refs=yes
+set vertical-split = no
+set split-view-height = 80%
+set diff-context = 4
+set pager-view  = line-number:yes,interval=1 text
+set stage-view  = line-number:yes,interval=1 text
+set log-view    = line-number:yes,interval=1 text
+set blob-view   = line-number:yes,interval=1 text
+set diff-view   = line-number:yes,interval=1 text:yes,commit-title-overflow=no
+bind main    R !git rebase -i %(commit)
+bind diff    R !git rebase -i %(commit)
+bind branch P !git push origin %(branch)
+
+bind generic ^      ?git reset --soft HEAD^
+set refresh-mode = auto
+
+bind main O @tosa %(commit)
+bind blame O @tosa %(commit)

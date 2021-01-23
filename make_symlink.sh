@@ -1,6 +1,6 @@
 #!/bin/bash
 # 配置したい設定ファイル
-dotfiles=(.zshrc .vimrc .gemrc .ideavimrc .pryrc)
+dotfiles=(.zshrc .vimrc .gemrc .ideavimrc .pryrc .tigrc)
 
 # ホームディレクトリ直下に作成する
 for file in "${dotfiles[@]}"; do
