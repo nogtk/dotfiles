@@ -20,3 +20,5 @@ zinit light-mode for \
     zinit-zsh/z-a-bin-gem-node
 
 ### End of Zinit's installer chunk
+
+zinit ice depth=1; zinit light romkatv/powerlevel10k
