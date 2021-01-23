@@ -75,5 +75,3 @@ bindkey '^g' peco-src
 # For use vim in gh
 export GIT_EDITOR=vim
 
-export POWERLEVEL9K_INSTANT_PROMPT=quiet
-
