@@ -1,0 +1,11 @@
+inoremap jj <Esc>
+nnoremap j gj
+nnoremap k gk
+set clipboard=unnamed
+
+set multiple-cursors
+map <C-N>  <A-N>
+map <C-P>  <A-P>
+map <C-X>  <A-X>
+map g<C-N> g<A-N>
+set ideajoin
