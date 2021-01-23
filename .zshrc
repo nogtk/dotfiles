@@ -1,5 +1,6 @@
 SCRIPT_DIR=$HOME/dotfiles
 
+source $SCRIPT_DIR/zsh/config.zsh
 source $SCRIPT_DIR/zsh/plugins.zsh
 source $SCRIPT_DIR/zsh/p10k.zsh
 source $SCRIPT_DIR/zsh/alias.zsh
@@ -10,16 +11,6 @@ export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
 export PATH="/usr/local/opt/openssl/bin:$PATH"
 export LDFLAGS="-L/usr/local/opt/openssl/lib"
 export CPPFLAGS="-I/usr/local/opt/openssl/include"
-export HISTFILE=${HOME}/.zsh_history
-export HISTSIZE=10000
-export SAVEHIST=100000
-setopt hist_ignore_all_dups
-setopt extended_history
-setopt share_history
-setopt hist_reduce_blanks
-setopt hist_save_no_dups
-setopt hist_expand
-setopt inc_append_history
 
 # === cool-peco init ===
 FPATH="$FPATH:/Users/taka.naoga/cool-peco"
