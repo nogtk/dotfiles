@@ -11,8 +11,6 @@ eval "$(anyenv init -)"
 
 # direnv
 eval "$(direnv hook zsh)"
-# goenv
-eval "$(goenv init -)"
 
 # === cool-peco init ===
 FPATH="$FPATH:/Users/taka.naoga/cool-peco"
