@@ -43,7 +43,6 @@ brew "lastpass-cli"
 brew "lsd"
 brew "mysql@5.7", restart_service: true, link: true
 brew "nodebrew"
-brew "nvm"
 brew "openjdk@11"
 brew "peco"
 brew "pngquant"
