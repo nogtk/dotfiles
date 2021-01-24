@@ -20,7 +20,7 @@ cool-peco
 
 # bind key for cool-peco
 bindkey '^r' cool-peco-history
-bindkey '^v' cool-peco-ghq
+bindkey '^g' cool-peco-ghq
 
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/Users/taka.naoga/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/taka.naoga/google-cloud-sdk/path.zsh.inc'; fi
