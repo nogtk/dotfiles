@@ -6,6 +6,9 @@ source $SCRIPT_DIR/zsh/p10k.zsh
 source $SCRIPT_DIR/zsh/alias.zsh
 source $SCRIPT_DIR/zsh/export.zsh
 
+# anyenv
+eval "$(anyenv init -)"
+
 # direnv
 eval "$(direnv hook zsh)"
 # goenv
