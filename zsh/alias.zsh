@@ -12,3 +12,5 @@ alias ll='lsd -l'
 # easy handler chrome application by terminal
 alias chrome="open /Applications/Google\ Chrome.app"
 
+# cool-peco
+alias pco='cool-peco-git-checkout'
