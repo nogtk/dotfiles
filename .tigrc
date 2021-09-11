@@ -17,4 +17,4 @@ set refresh-mode = auto
 bind main O @tosa %(commit)
 bind blame O @tosa %(commit)
 
-color cursor            white   green   bold
+color cursor            White   green   bold
