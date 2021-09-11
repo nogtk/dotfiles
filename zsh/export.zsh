@@ -17,6 +17,7 @@ export NVM_DIR="$HOME/.nvm"
 # path
 export PATH="/usr/local/opt/openssl/bin:$HOME/jisaku_command:$HOME/.cargo/bin:$GOENV_ROOT/bin:$GOPATH/bin:$PATH"
 export PATH=/usr/X11/bin:$PATH
+export PATH=/Applications/CMake.app/Contents/bin:$PATH
 
 # For use vim in gh
 export GIT_EDITOR=vim
