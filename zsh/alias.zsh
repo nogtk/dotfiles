@@ -17,3 +17,6 @@ alias pco='cool-peco-git-checkout'
 
 # terraform
 alias tf='terraform'
+
+# k8s
+alias k="kubectl"
