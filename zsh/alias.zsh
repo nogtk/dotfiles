@@ -6,7 +6,6 @@ alias t='tig'
 alias be='bundle exec'
 
 # extend `ls` command by rust
-alias ls='lsd'
 alias ll='lsd -l'
 
 # easy handler chrome application by terminal
