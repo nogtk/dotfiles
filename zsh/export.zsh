@@ -23,3 +23,9 @@ export PATH=/Applications/CMake.app/Contents/bin:$PATH
 export GIT_EDITOR=vim
 
 export DISPLAY=:0.0
+
+# krew
+export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
+
+# enable multi process on mac
+export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES
