@@ -7,8 +7,13 @@ export GOPATH="$HOME/go"
 export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
 
 # openssl
-export LDFLAGS="-L/usr/local/opt/openssl/lib"
-export CPPFLAGS="-I/usr/local/opt/openssl/include"
+## x86_64
+# export LDFLAGS="-L/usr/local/opt/openssl/lib"
+# export CPPFLAGS="-I/usr/local/opt/openssl/include"
+
+## arm
+export LDFLAGS="-L/opt/homebrew/opt/openssl/lib"
+export CPPFLAGS="-I/opt/homebrew/opt/openssl/include"
 
 # nvm
 export NVM_DIR="$HOME/.nvm"
@@ -16,8 +21,10 @@ export NVM_DIR="$HOME/.nvm"
 
 # path
 export PATH="/usr/local/opt/openssl/bin:$HOME/jisaku_command:$HOME/.cargo/bin:$GOENV_ROOT/bin:$GOPATH/bin:$PATH"
+export PATH="$HOME/.rbenv/bin:$PATH"
 export PATH=/usr/X11/bin:$PATH
 export PATH=/Applications/CMake.app/Contents/bin:$PATH
+export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 
 # For use vim in gh
 export GIT_EDITOR=vim
@@ -29,3 +36,6 @@ export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 
 # enable multi process on mac
 export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES
+
+# bundler
+BUNDLER_EDITOR="$(which /usr/local/bin/code)"

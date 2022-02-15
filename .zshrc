@@ -5,6 +5,7 @@ source $SCRIPT_DIR/zsh/plugins.zsh
 source $SCRIPT_DIR/zsh/p10k.zsh
 source $SCRIPT_DIR/zsh/alias.zsh
 source $SCRIPT_DIR/zsh/export.zsh
+source $SCRIPT_DIR/zsh/export_secret.zsh
 
 # anyenv
 eval "$(anyenv init -)"
@@ -35,3 +36,9 @@ autoload -Uz cool-peco
 cool-peco
 # ======================
 
+
+# === cool-peco init ===
+FPATH="$FPATH:/Users/taka.naoga/cool-peco"
+autoload -Uz cool-peco
+cool-peco
+# ======================
