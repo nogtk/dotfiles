@@ -1,0 +1,7 @@
+{
+    "Style": {
+        "Basic": ["on_default", "default"],
+        "Selected": ["bold", "on_green", "white"],
+        "Matched": ["black", "on_green"]
+    }
+}
