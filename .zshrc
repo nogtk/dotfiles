@@ -1,3 +1,5 @@
+# Fig pre block. Keep at the top of this file.
+[[ -f "$HOME/.fig/shell/zshrc.pre.zsh" ]] && . "$HOME/.fig/shell/zshrc.pre.zsh"
 SCRIPT_DIR=$HOME/dotfiles
 
 source $SCRIPT_DIR/zsh/config.zsh
@@ -42,3 +44,6 @@ FPATH="$FPATH:/Users/taka.naoga/cool-peco"
 autoload -Uz cool-peco
 cool-peco
 # ======================
+
+# Fig post block. Keep at the bottom of this file.
+[[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && . "$HOME/.fig/shell/zshrc.post.zsh"

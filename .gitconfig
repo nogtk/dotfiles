@@ -16,6 +16,8 @@
         openpr = "!f() { hub browse -- `git log --merges --oneline --reverse --ancestry-path $1...master | grep 'Merge pull request #' | head -n 1 | cut -f5 -d' ' | sed -e 's%#%pull/%'`; }; f"
         blamepr = "!f() { git blame $1 |peco| cut -f 1 -d ' ' | xargs -I@ git openpr @; };f"
 	showpr = !"f() { git log --merges --oneline --reverse --ancestry-path $1...master | grep 'Merge pull request #' | head -n 1; }; f"
+	sw = switch
+	rs = restore
 [ghq]
 	root = /Users/taka.naoga/Development
 [filter "lfs"]
