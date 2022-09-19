@@ -137,3 +137,6 @@ call ddc#enable()
 " shortcut
 noremap <silent><C-e> :NERDTreeToggle<CR>
 noremap <silent><C-o> :FZF<CR>
+
+let g:lsp_diagnostics_enabled = 1
+let g:lsp_diagnostics_echo_cursor = 1
