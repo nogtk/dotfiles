@@ -23,7 +23,7 @@ alias tf='terraform'
 alias k="kubectl"
 
 # bat (improve cat)
-alias cat="bat"
+alias icat="bat"
 
 # git-switcher-trainer
 # ref: https://qiita.com/sonatard/items/a6dc4909e683608ab0c3

@@ -1,5 +1,5 @@
 # Fig pre block. Keep at the top of this file.
-[[ -f "$HOME/.fig/shell/zshrc.pre.zsh" ]] && . "$HOME/.fig/shell/zshrc.pre.zsh"
+[[ -f "$HOME/.fig/shell/zshrc.pre.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.pre.zsh"
 SCRIPT_DIR=$HOME/dotfiles
 
 source $SCRIPT_DIR/zsh/config.zsh
@@ -23,7 +23,7 @@ cool-peco
 
 # bind key for cool-peco
 bindkey '^r' cool-peco-history
-bindkey '^g' cool-peco-ghq
+bindkey '^G' cool-peco-ghq
 
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/Users/taka.naoga/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/taka.naoga/google-cloud-sdk/path.zsh.inc'; fi

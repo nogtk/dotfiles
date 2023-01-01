@@ -22,7 +22,7 @@ set history=5000 " 保存するコマンド履歴の数
 " ペーストの設定
 if &term =~ "xterm"
     let &t_SI .= "\e[?2004h"
-    let &t_EI .= "\e[?2004l"
+	    let &t_EI .= "\e[?2004l"
     let &pastetoggle = "\e[201~"
 
     function XTermPasteBegin(ret)
@@ -57,15 +57,7 @@ call dein#add('hashivim/vim-terraform')
 call dein#add('junegunn/fzf', { 'build': './install --all', 'merged': 0 })
 call dein#add('junegunn/fzf.vim', { 'depends': 'fzf' })
 call dein#add('tbodt/deoplete-tabnine', { 'build': './install.sh' })
-call dein#add('Shougo/ddc.vim')
-call dein#add('vim-denops/denops.vim')
-call dein#add('Shougo/ddc-around')
-call dein#add('Shougo/ddc-matcher_head')
-call dein#add('Shougo/ddc-sorter_rank')
-call dein#add('prabirshrestha/vim-lsp')
-call dein#add('mattn/vim-lsp-settings')
-call dein#add('shun/ddc-vim-lsp')
-call dein#add('Shougo/ddc-converter_remove_overlap')
+call dein#add('neoclide/coc.nvim', {'merged':0, 'rev': 'release'})
 
 " Required:
 call dein#end()
@@ -102,37 +94,34 @@ endif
 syntax enable
 colorscheme night-owl
 
-" ddc.vim settings ref: https://github.com/Shougo/ddc.vim
-" Customize global settings
-" Use around source.
-" https://github.com/Shougo/ddc-around
-call ddc#custom#patch_global('sources', [
-    \ 'around',
-    \ 'vim-lsp',
-    \ ])
-call ddc#custom#patch_global('sourceOptions', {
-    \ '_': {
-    \     'matchers': ['matcher_head'],
-    \     'sorters': ['sorter_rank'],
-    \ },
-    \ 'around': { 'mark': 'around'},
-    \ 'vim-lsp': {
-    \ 'mark': 'LSP',
-    \ 'matchers': ['matcher_head'],
-    \ 'forceCompletionPattern': '\.|:|->|"\w+/*'
-    \ }
-    \ })
-
-" <TAB>: completion.
+" coc-nvim
+" Use tab for trigger completion with characters ahead and navigate.
+" NOTE: Use command ':verbose imap <tab>' to make sure tab is not mapped by
+" other plugin before putting this into your config.
 inoremap <silent><expr> <TAB>
-\ ddc#map#pum_visible() ? '<C-n>' :
-\ (col('.') <= 1 <Bar><Bar> getline('.')[col('.') - 2] =~# '\s') ?
-\ '<TAB>' : ddc#map#manual_complete()
+      \ coc#pum#visible() ? coc#pum#next(1):
+      \ CheckBackspace() ? "\<Tab>" :
+      \ coc#refresh()
+inoremap <expr><S-TAB> coc#pum#visible() ? coc#pum#prev(1) : "\<C-h>"
 
-" <S-TAB>: completion back.
-inoremap <expr><S-TAB>  ddc#map#pum_visible() ? '<C-p>' : '<C-h>'
-" Use ddc.
-call ddc#enable()
+" Make <CR> to accept selected completion item or notify coc.nvim to format
+" <C-g>u breaks current undo, please make your own choice.
+inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm()
+                              \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
+
+" Use `[g` and `]g` to navigate diagnostics
+" Use `:CocDiagnostics` to get all diagnostics of current buffer in location list.
+nmap <silent> [g <Plug>(coc-diagnostic-prev)
+nmap <silent> ]g <Plug>(coc-diagnostic-next)
+
+" GoTo code navigation.
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references)
+
+" Use K to show documentation in preview window.
+nnoremap <silent> K :call ShowDocumentation()<CR>
 
 " shortcut
 noremap <silent><C-e> :NERDTreeToggle<CR>

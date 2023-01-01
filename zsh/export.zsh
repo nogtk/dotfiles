@@ -37,5 +37,8 @@ export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 # enable multi process on mac
 export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES
 
+# python
+export PATH="$(brew --prefix python3)/bin:$PATH"
+
 # bundler
 BUNDLER_EDITOR="$(which /usr/local/bin/code)"
