@@ -14,6 +14,8 @@ alias chrome="open /Applications/Google\ Chrome.app"
 # cool-peco
 alias pco='cool-peco-git-checkout'
 
+alias r='cd $(ghq root)/$(ghq list | peco)'
+
 # terraform
 alias tf='terraform'
 
