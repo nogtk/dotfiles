@@ -25,3 +25,9 @@
 	required = true
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
+[push]
+	autoSetupRemote = true
+[scalar]
+	repo = /Users/taka.naoga/Development/github.com/moneyforward/pfm_web
+[maintenance]
+	repo = /Users/taka.naoga/Development/github.com/moneyforward/pfm_web
