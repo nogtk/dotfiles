@@ -42,3 +42,6 @@ export PATH="$(brew --prefix python3)/bin:$PATH"
 
 # bundler
 BUNDLER_EDITOR="$(which /usr/local/bin/code)"
+
+# ghq
+export GHQ_ROOT="${HOME}/Development"

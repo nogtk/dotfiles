@@ -18,8 +18,6 @@
 	showpr = !"f() { git log --merges --oneline --reverse --ancestry-path $1...master | grep 'Merge pull request #' | head -n 1; }; f"
 	sw = switch
 	rs = restore
-[ghq]
-	root = /Users/taka.naoga/Development
 [filter "lfs"]
 	process = git-lfs filter-process
 	required = true
