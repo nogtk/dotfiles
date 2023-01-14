@@ -6,3 +6,5 @@ files=(.zshrc .vimrc .gemrc .ideavimrc .pryrc .tigrc .gitconfig Brewfile)
 for file in "${files[@]}"; do
 	ln -s $HOME/dotfiles/$file $HOME/$file
 done
+
+ln -s $HOME/dotfiles/starship.toml $HOME/.config/
