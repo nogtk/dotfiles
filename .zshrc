@@ -49,3 +49,6 @@ cool-peco
 [[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && . "$HOME/.fig/shell/zshrc.post.zsh"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# starship
+eval "$(starship init zsh)"
