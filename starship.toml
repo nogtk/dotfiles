@@ -1,3 +1,6 @@
+[package]
+disabled = true
+
 [git_branch]
 symbol = '🌱 '
 ignore_branches = ['master', 'main']
