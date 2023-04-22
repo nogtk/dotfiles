@@ -16,7 +16,7 @@ eval "$(anyenv init -)"
 eval "$(direnv hook zsh)"
 
 # === cool-peco init ===
-FPATH="$FPATH:/Users/taka.naoga/cool-peco"
+FPATH="$FPATH:$HOME/cool-peco"
 autoload -Uz cool-peco
 cool-peco
 # ======================

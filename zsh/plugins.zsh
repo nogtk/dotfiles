@@ -19,7 +19,3 @@ zinit light-mode for \
     zdharma-continuum/zinit-annex-patch-dl \
     zdharma-continuum/zinit-annex-rust
 
-source /opt/homebrew/opt/powerlevel10k/powerlevel10k.zsh-theme
-
-zinit light zsh-users/zsh-autosuggestions
-ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=78'
