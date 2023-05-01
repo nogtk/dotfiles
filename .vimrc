@@ -52,7 +52,6 @@ call dein#add('preservim/nerdtree')
 call dein#add('itchyny/lightline.vim')
 call dein#add('bronson/vim-trailing-whitespace')
 call dein#add('Yggdroot/indentLine')
-call dein#add('haishanh/night-owl.vim')
 call dein#add('hashivim/vim-terraform')
 call dein#add('junegunn/fzf', { 'build': './install --all', 'merged': 0 })
 call dein#add('junegunn/fzf.vim', { 'depends': 'fzf' })
@@ -86,13 +85,6 @@ set ruler " ステータスラインの右側にカーソルの現在位置を�
 let g:lightline = {
       \ 'colorscheme': 'one',
       \ }
-
-" night-owl color scheme
-if (has("termguicolors"))
- set termguicolors
-endif
-syntax enable
-colorscheme night-owl
 
 " coc-nvim
 " Use tab for trigger completion with characters ahead and navigate.
