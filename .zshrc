@@ -52,3 +52,10 @@ cool-peco
 
 # starship
 eval "$(starship init zsh)"
+
+# asdf
+if [ "`brew list | grep chromedriver`" ]; then
+  brew install chromedriver
+fi
+. $(brew --prefix asdf)/libexec/asdf.sh
+
