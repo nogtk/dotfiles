@@ -1,6 +1,6 @@
 #!/bin/bash
 # 配置したい設定ファイル
-files=(.zshrc .vimrc .gemrc .ideavimrc .pryrc .tigrc .gitconfig Brewfile)
+files=(.zshrc .vimrc .gemrc .ideavimrc .pryrc .tigrc .gitconfig Brewfile .vscode/.vimrc)
 
 # ホームディレクトリ直下に作成する
 for file in "${files[@]}"; do
