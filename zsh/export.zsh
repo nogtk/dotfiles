@@ -4,7 +4,8 @@ export GOENV_DISABLE_GOPATH=1
 export GOPATH="$HOME/go"
 
 # java
-export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
+# javaの開発時はコメントアウトする
+# export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
 
 # openssl
 ## x86_64
