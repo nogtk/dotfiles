@@ -9,16 +9,10 @@ source $SCRIPT_DIR/zsh/alias.zsh
 source $SCRIPT_DIR/zsh/export.zsh
 source $SCRIPT_DIR/zsh/export_secret.zsh
 
-# anyenv
-eval "$(anyenv init -)"
-
-# direnv
-eval "$(direnv hook zsh)"
-
 # === cool-peco init ===
-FPATH="$FPATH:$HOME/cool-peco"
-autoload -Uz cool-peco
-cool-peco
+# FPATH="$FPATH:$HOME/cool-peco"
+# autoload -Uz cool-peco
+# cool-peco
 # ======================
 
 # bind key for cool-peco
@@ -30,20 +24,6 @@ if [ -f '/Users/taka.naoga/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/taka
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/taka.naoga/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/taka.naoga/google-cloud-sdk/completion.zsh.inc'; fi
-
-
-# === cool-peco init ===
-FPATH="$FPATH:/Users/takanaoga/cool-peco"
-autoload -Uz cool-peco
-cool-peco
-# ======================
-
-
-# === cool-peco init ===
-FPATH="$FPATH:/Users/taka.naoga/cool-peco"
-autoload -Uz cool-peco
-cool-peco
-# ======================
 
 # Fig post block. Keep at the bottom of this file.
 [[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && . "$HOME/.fig/shell/zshrc.post.zsh"

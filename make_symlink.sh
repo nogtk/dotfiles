@@ -4,6 +4,7 @@ files=(.zshrc .vimrc .gemrc .ideavimrc .pryrc .tigrc .gitconfig Brewfile .vscode
 
 # ホームディレクトリ直下に作成する
 for file in "${files[@]}"; do
+	rm $HOME/$file
 	ln -s $HOME/dotfiles/$file $HOME/$file
 done
 
